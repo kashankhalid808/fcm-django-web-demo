@@ -27,7 +27,8 @@ SECRET_KEY = 'a9wdde9oig*h(=+!av^yhg5ahasn2_)u8kg@_alp=t4^3adxfi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+     '0.0.0.0','localhost']
 
 
 # Application definition
@@ -134,8 +135,9 @@ FCM_DJANGO_SETTINGS = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
-
+   
 CORS_ALLOW_CREDENTIALS = True
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',

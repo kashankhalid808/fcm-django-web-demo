@@ -141,7 +141,7 @@ limitations under the License.
   });
   // [END receive_message]
 
-  function resetUI() {
+  async function resetUI() {
     clearMessages();
     showToken('loading...');
     // [START get_token]
@@ -149,7 +149,7 @@ limitations under the License.
     // subsequent calls to getToken will return from cache.
 
     console.log("getting token")
-    messaging.getToken().then((resp) => {
+    await messaging.getToken().then((resp) => {
       console.log(resp)
     })
     messaging.getToken()
@@ -179,7 +179,9 @@ limitations under the License.
   function showToken(currentToken) {
     // Show token in console and UI.
     var tokenElement = document.querySelector('#token');
+    console.log("this is a token elemenet")
     console.log(tokenElement)
+    console.log("this is current token")
     console.log(currentToken)
     tokenElement.textContent = currentToken;
   }
